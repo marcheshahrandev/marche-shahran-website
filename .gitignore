@@ -2,3 +2,7 @@
 ._*
 *.py
 *_backup.html
+*.bak*
+press-section-*.html
+press-styles.css
+assets/._*

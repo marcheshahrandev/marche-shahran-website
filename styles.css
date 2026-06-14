@@ -307,3 +307,463 @@ h1,h2,h3,h4{font-family:var(--f-head);font-weight:600;line-height:1.05;letter-sp
 
 /* Weekly specials — hidden until activated */
 .specials-hidden { display: none; }
+
+
+/* ============================================================
+   PRESS & REVIEWS SECTIONS
+   Append this entire block to the bottom of styles.css
+   ============================================================ */
+
+/* ---------- shared label ---------- */
+.press-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-saffron, #e0a32a);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+/* ============================================================
+   HOMEPAGE — Press + Reviews combined section
+   ============================================================ */
+.press-reviews-section {
+  padding: 5rem 0;
+  background: #f5f0e8;
+}
+
+.press-reviews-section .section-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* --- Article teaser card --- */
+.press-teaser {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  align-items: center;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 20px rgba(0,0,0,0.07);
+  margin-bottom: 3.5rem;
+}
+
+.press-teaser__image {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
+.press-teaser__body {
+  padding: 2.5rem 2.5rem 2.5rem 1rem;
+}
+
+.press-teaser__source {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #f0ede6;
+  border-radius: 6px;
+  padding: 0.35rem 0.75rem;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.press-teaser__source svg {
+  width: 14px;
+  height: 14px;
+  opacity: 0.6;
+}
+
+.press-teaser__headline {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1c4730;
+  line-height: 1.25;
+  margin: 0 0 1rem;
+}
+
+.press-teaser__excerpt {
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: 0.97rem;
+  color: #444;
+  line-height: 1.7;
+  margin: 0 0 1.5rem;
+}
+
+.press-teaser__btn {
+  display: inline-block;
+  background: #1c4730;
+  color: #fff;
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 600;
+  padding: 0.7rem 1.4rem;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.press-teaser__btn:hover {
+  background: #e0a32a;
+  color: #1c4730;
+}
+
+/* --- Reviews carousel --- */
+.reviews-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.reviews-header h2 {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #1c4730;
+  margin: 0;
+}
+
+.reviews-stars-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.reviews-stars-badge .stars {
+  color: #e0a32a;
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+}
+
+.reviews-track-wrapper {
+  overflow: hidden;
+  position: relative;
+}
+
+.reviews-track {
+  display: flex;
+  gap: 1.25rem;
+  transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.review-card {
+  flex: 0 0 calc(33.333% - 0.85rem);
+  background: #fff;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  border-top: 3px solid #e0a32a;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.review-card__stars {
+  color: #e0a32a;
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+}
+
+.review-card__text {
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: 0.92rem;
+  color: #333;
+  line-height: 1.65;
+  flex-grow: 1;
+}
+
+.review-card__author {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.72rem;
+  color: #888;
+  letter-spacing: 0.05em;
+}
+
+.review-card__author strong {
+  display: block;
+  color: #1c4730;
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 0.15rem;
+}
+
+.reviews-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.reviews-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 2px solid #1c4730;
+  background: transparent;
+  color: #1c4730;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, color 0.2s;
+  font-size: 1rem;
+}
+
+.reviews-btn:hover {
+  background: #1c4730;
+  color: #fff;
+}
+
+.reviews-dots {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.reviews-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #ccc;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.reviews-dot.active {
+  background: #1c4730;
+}
+
+/* ============================================================
+   ABOUT PAGE — Full article section
+   ============================================================ */
+.press-full-section {
+  padding: 5rem 0;
+  background: #faf6ec;
+}
+
+.press-full-section .section-inner {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.press-full-section .section-heading {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1c4730;
+  margin: 0 0 0.5rem;
+}
+
+.press-article {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 20px rgba(0,0,0,0.07);
+  margin-top: 2rem;
+}
+
+.press-article__image {
+  width: 100%;
+  max-height: 420px;
+  object-fit: cover;
+  object-position: center 30%;
+  display: block;
+}
+
+.press-article__body {
+  padding: 2.5rem 3rem;
+}
+
+.press-article__meta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.press-article__badge {
+  background: #f0ede6;
+  border-radius: 6px;
+  padding: 0.35rem 0.75rem;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #555;
+}
+
+.press-article__byline {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.72rem;
+  color: #888;
+}
+
+.press-article__title {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #1c4730;
+  line-height: 1.25;
+  margin: 0 0 1.5rem;
+}
+
+.press-article__content h3 {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1c4730;
+  margin: 2rem 0 0.5rem;
+}
+
+.press-article__content p {
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: 0.97rem;
+  color: #333;
+  line-height: 1.8;
+  margin: 0 0 1rem;
+}
+
+.press-article__content blockquote {
+  border-left: 3px solid #e0a32a;
+  margin: 1.5rem 0;
+  padding: 0.75rem 1.25rem;
+  background: #faf6ec;
+  border-radius: 0 6px 6px 0;
+  font-style: italic;
+  color: #555;
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.press-article__footer {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #eee;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.75rem;
+  color: #aaa;
+  letter-spacing: 0.05em;
+}
+
+/* --- About page reviews grid --- */
+.about-reviews-section {
+  padding: 4rem 0 5rem;
+  background: #f5f0e8;
+}
+
+.about-reviews-section .section-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.about-reviews-section h2 {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #1c4730;
+  margin: 0 0 0.4rem;
+}
+
+.about-reviews-section .reviews-sub {
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: 0.95rem;
+  color: #666;
+  margin: 0 0 2.5rem;
+}
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 900px) {
+  .press-teaser {
+    grid-template-columns: 1fr;
+  }
+  .press-teaser__image {
+    height: 240px;
+  }
+  .press-teaser__body {
+    padding: 1.75rem;
+  }
+  .review-card {
+    flex: 0 0 calc(50% - 0.65rem);
+  }
+  .reviews-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .press-article__body {
+    padding: 1.75rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .review-card {
+    flex: 0 0 calc(100% - 0rem);
+  }
+  .reviews-grid {
+    grid-template-columns: 1fr;
+  }
+  .press-teaser__headline {
+    font-size: 1.25rem;
+  }
+  .reviews-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}
+
+/* Social icons & unified footer */
+.foot-social { display:flex; gap:1rem; margin-top:1rem; }
+.foot-social a { color:inherit; opacity:0.7; transition:opacity 0.2s; }
+.foot-social a:hover { opacity:1; }
+.foot-bottom { display:flex; justify-content:space-between; padding-top:1rem; border-top:1px solid rgba(255,255,255,0.15); font-size:0.8rem; opacity:0.6; }
+
+
+.mi-num {
+  display: inline-block;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.72rem;
+  color: #888;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+  min-width: 2rem;
+}
+
+
+/* Menu number inline fix */
+.mi-num {
+  display: inline;
+  font-family: var(--f-mono);
+  font-size: 0.72rem;
+  color: #aaa;
+  margin-right: 0.4rem;
+}
+.menu-item { grid-template-columns: 1fr auto; }
+.menu-item .mi-price { order: 0; }
